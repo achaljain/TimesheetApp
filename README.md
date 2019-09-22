@@ -44,6 +44,7 @@ Total Hrs for a day can not be more than 20 (N: 8, L: 12)
 - Get, Post API requests (Handled through single file src/api/index.js)
 - Map API object to proper format used by APP and vice-versa during GET and POST
 - Validations (Mostly implenmented, verify, test and add more)
+- Default alerts must be replaced by custom UI
 - Other enhancements as per wish :relieved:
 
 ## Available Scripts
