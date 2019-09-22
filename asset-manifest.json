@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/TimesheetApp/static/css/main.69fc7d97.chunk.css",
+    "main.js": "/TimesheetApp/static/js/main.fcf0e668.chunk.js",
+    "main.js.map": "/TimesheetApp/static/js/main.fcf0e668.chunk.js.map",
+    "runtime~main.js": "/TimesheetApp/static/js/runtime~main.b4d7f310.js",
+    "runtime~main.js.map": "/TimesheetApp/static/js/runtime~main.b4d7f310.js.map",
+    "static/css/2.67d38813.chunk.css": "/TimesheetApp/static/css/2.67d38813.chunk.css",
+    "static/js/2.81c9e933.chunk.js": "/TimesheetApp/static/js/2.81c9e933.chunk.js",
+    "static/js/2.81c9e933.chunk.js.map": "/TimesheetApp/static/js/2.81c9e933.chunk.js.map",
+    "index.html": "/TimesheetApp/index.html",
+    "precache-manifest.302d660315176486e185ccef1cc39303.js": "/TimesheetApp/precache-manifest.302d660315176486e185ccef1cc39303.js",
+    "service-worker.js": "/TimesheetApp/service-worker.js",
+    "static/css/2.67d38813.chunk.css.map": "/TimesheetApp/static/css/2.67d38813.chunk.css.map",
+    "static/css/main.69fc7d97.chunk.css.map": "/TimesheetApp/static/css/main.69fc7d97.chunk.css.map",
+    "static/media/index.css": "/TimesheetApp/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  }
+}
