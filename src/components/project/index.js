@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
         overflowX: "hidden"
     },
     gridItem: {
-        textAlign: "center"
+        textAlign: "left"
     },
     switch: {
         float: "right"
