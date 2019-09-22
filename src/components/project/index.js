@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         minWidth: 600,
         maxHeight: 300,
-        overflowY: "auto",
+        overflowY: "hidden",
         overflowX: "hidden"
     },
     gridItem: {
@@ -50,6 +50,9 @@ const useStyles = makeStyles(theme => ({
     },
     dialogContent: {
         position: "relative"
+    },
+    taskSelect: {
+        width: '100%'
     }
 }));
 
@@ -128,14 +131,19 @@ export default function ProjectDialog(props) {
                         <Grid item xs={12}>
                             <Grid container justify="center" spacing={2}>
 
-                                <Grid item xs={4} className={classes.gridItem}>
+                                <Grid item xs={3} className={classes.gridItem}>
                                     <Typography variant="h6" gutterBottom>
                                         Project
                                     </Typography>
                                 </Grid>
-                                <Grid item xs={4} className={classes.gridItem}>
+                                <Grid item xs={3} className={classes.gridItem}>
                                     <Typography variant="h6" gutterBottom>
                                         Task
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={2} className={classes.gridItem}>
+                                    <Typography variant="h6" gutterBottom>
+                                        Description
                                     </Typography>
                                 </Grid>
                                 <Grid item xs={2} className={classes.gridItem}>
@@ -158,12 +166,12 @@ export default function ProjectDialog(props) {
                                     <Grid item key={`project-${idx}`} xs={12}>
                                         <Grid container justify="center" spacing={2}>
 
-                                            <Grid item xs={4} className={classes.gridItem}>
+                                            <Grid item xs={3} className={classes.gridItem}>
                                                 <Typography variant="body1" gutterBottom className={classes.projectName}>
-                                                    {project.project}
+                                                    {project.project} ({project.allocation})
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs={4} className={classes.gridItem}>
+                                            <Grid item xs={3} className={classes.gridItem}>
                                                 <Select
                                                     value={project.task}
                                                     onChange={event => updateProject(idx, "task", event.target.value)}
@@ -171,6 +179,7 @@ export default function ProjectDialog(props) {
                                                         name: 'task',
                                                         id: 'task',
                                                     }}
+                                                    className={classes.taskSelect}
                                                 >
                                                     {
                                                         taskOptions.map((val) => {
@@ -180,10 +189,12 @@ export default function ProjectDialog(props) {
                                                         })
                                                     }
                                                 </Select>
+                                            </Grid>
+                                            <Grid item xs={2} className={classes.gridItem}>
                                                 <TextField
                                                     autoFocus
                                                     id="description"
-                                                    label="Description(optional)"
+                                                    label=""
                                                     type="text"
                                                     margin="normal"
                                                     value={project.description}
@@ -197,6 +208,7 @@ export default function ProjectDialog(props) {
                                                     label=""
                                                     type="number"
                                                     margin="normal"
+                                                    variant="outlined"
                                                     value={project.normal}
                                                     onChange={event => updateProject(idx, "normal", event.target.value)}
                                                 />
@@ -207,6 +219,7 @@ export default function ProjectDialog(props) {
                                                     id="latehrs"
                                                     label=""
                                                     type="number"
+                                                    variant="outlined"
                                                     margin="normal"
                                                     value={project.late}
                                                     onChange={event => updateProject(idx, "late", event.target.value)}
@@ -221,6 +234,7 @@ export default function ProjectDialog(props) {
                     </Grid>
                     {leave && <div className={classes.leaveOverlay}></div>}
                 </DialogContent>
+                <Divider />
                 <DialogActions>
                     <Button onClick={handleClose} color="primary">
                         Cancel
