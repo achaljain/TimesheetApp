@@ -1,0 +1,16 @@
+.App {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  
+  .appbarContainer {
+    position: relative;
+    height: 70px;
+  }
+
+  .calenderRoot {
+    position: relative;
+    height: calc(100% - 70px);
+  }
+}

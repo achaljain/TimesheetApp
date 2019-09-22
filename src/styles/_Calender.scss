@@ -1,0 +1,58 @@
+@import 'react-big-calendar/lib/sass/styles';
+
+.calenderContainer {
+    height: calc(100% - 60px);
+    padding: 10px;
+
+    .progressLoaderContainer {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.7);
+        z-index: 10;
+        top: 0px;
+        left: 0px;
+        .progressLoader {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+
+    .uploadButton {
+        position: absolute;
+        top: 5px;
+        right: 20px;
+    }
+
+    .leave {
+        border-top: 20px solid #8afbb3
+    }
+
+    .holiday {
+        border-top: 20px solid #ffb6fc
+    }
+
+    .locked {
+        border-top: 20px solid #ff9d9d
+    }
+
+    .late {
+        border-top: 20px solid #fdfba1
+    }
+
+    .normal {
+        border-top: 20px solid #8afbb3
+    }
+
+    .notFill {
+        border-top: 20px solid #a5d6fb
+    }
+
+    .partialFill {
+        border-top: 20px solid #f7c88b
+    }
+}
